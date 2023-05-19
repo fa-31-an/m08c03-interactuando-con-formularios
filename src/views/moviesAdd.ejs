@@ -18,17 +18,17 @@
         <article class="mostrarFormulario">
             <ul class="errores"></ul>
             <form class="form" action="/movies/create" method="POST">
-                <label for="title">Titulo </label>
+                <label for="title" id="titleError">Titulo </label>
                 <div><input type="text" name="title" id="title" ></div>
-                <label for="rating">Calificación </label>
+                <label for="rating" id="ratingError">Calificación </label>
                 <div><input type="number" name="rating" id="rating" placeholder="Indicar valor entre 0 y 10"> </div>
-                <label for="awards">Premios </label>
+                <label for="awards" id="awardsError">Premios </label>
                 <div><input type="number" name="awards" id="awards" placeholder="Indicar valor entre 0 y 10"></div>
-                <label for="release_date">Fecha de creación </label>
+                <label for="release_date" id="release_dateError">Fecha de creación </label>
                 <div><input type="date" name="release_date" id="release_date" ></div>
-                <label for="length">Duración </label>
+                <label for="length" id="lengthError">Duración </label>
                 <div><input type="number" name="length" id="length" placeholder="Indicar duración entre 60 y 360 minutos" ></div>
-                <label for="genreID">Género </label>
+                <label for="genreID" id="genre_idError">Género </label>
                 <div>
                     <select name="genre_id" id="genre_id" >
                         <option value="" disabled selected>- Seleccione el género - </option>
@@ -43,6 +43,7 @@
                 <a  class="botonVolver" href="/movies">Listado de Películas</a></div>
             </form>
         </article>
+        <script src="/js/moviesAddValidation.js"></script>
     </section>
 </body>
 </html>
